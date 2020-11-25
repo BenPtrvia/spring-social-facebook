@@ -1,7 +1,9 @@
 buildscript {
     repositories {
+		mavenCentral()
+		jcenter()
         maven { url 'https://repo.spring.io/plugins-release' }
-    }
+	}
     dependencies {
         classpath 'org.springframework.build.gradle:docbook-reference-plugin:0.2.8'
         classpath 'me.champeau.gradle:gradle-javadoc-hotfix-plugin:0.1'
@@ -45,7 +47,8 @@ configure(allprojects - docProjects) {
     repositories {
         maven { url "https://repo.spring.io/libs-snapshot" }
         maven { url "https://repo.spring.io/libs-milestone" }
-        mavenLocal()
+      	jcenter()
+		mavenCentral()
     }
 
     dependencies {
